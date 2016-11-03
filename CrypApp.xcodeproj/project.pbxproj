@@ -50,7 +50,7 @@
 		0D8F97841DA66941002D4401 /* CrypAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CrypAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D8F97881DA66941002D4401 /* CrypAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrypAppUITests.swift; sourceTree = "<group>"; };
 		0D8F978A1DA66941002D4401 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0D8F979A1DA66A6B002D4401 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionViewController.swift; path = ../CollectionViewController.swift; sourceTree = "<group>"; };
+		0D8F979A1DA66A6B002D4401 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		0D8F979C1DA66AE8002D4401 /* ViewControllerCaesar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerCaesar.swift; sourceTree = "<group>"; };
 		0DBA3BF51DA6BA3200E723E3 /* ViewControllerAtbash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerAtbash.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */

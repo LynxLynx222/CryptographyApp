@@ -22,18 +22,20 @@ class CollectionViewController: UICollectionViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+}
 
-
+extension CollectionViewController{
+    
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return arrayMethods.count
     }
-
+    
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as UICollectionViewCell
-    
+        
         let cellLabel = cell.viewWithTag(1) as! UILabel
         cellLabel.text = arrayMethods[indexPath.row]
-    
+        
         return cell
     }
     
@@ -43,5 +45,4 @@ class CollectionViewController: UICollectionViewController {
         let viewController = storyboard?.instantiateViewControllerWithIdentifier(vcName)
         self.navigationController?.pushViewController(viewController!, animated: true)
     }
-
 }

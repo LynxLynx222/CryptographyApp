@@ -19,25 +19,24 @@ class ViewControllerVigener: UIViewController {
         //tap to dismiss keyboard
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    func dismissKeyboard() {
-        view.endEditing(true)
-    }
+    
+}
+
+extension ViewControllerVigener{
     
     @IBAction func buttonTappedEncrypt(sender: AnyObject) {
-       
+        
         shiftLetters(true)
-
+        
     }
     @IBAction func buttonTappedDecrypt(sender: AnyObject) {
-    
+        
         shiftLetters(false)
         
     }
@@ -71,14 +70,14 @@ class ViewControllerVigener: UIViewController {
                 if(numberLetter > 122){
                     numberLetter -= 26
                 }
-                //if the letter is beyond a, start from z
+                    //if the letter is beyond a, start from z
                 else if(numberLetter < 97)
                 {
                     numberLetter += 26
                 }
                 encryptedText.append(Character(UnicodeScalar(numberLetter)))
             }
-            //if the letter is between a and z, shift it by the ordinal number of the key
+                //if the letter is between a and z, shift it by the ordinal number of the key
             else if(numberLetter >= 65 && numberLetter <= 90){
                 switch encryption{
                 case true: numberLetter += numberKey - 65
@@ -88,7 +87,7 @@ class ViewControllerVigener: UIViewController {
                 if(numberLetter > 90){
                     numberLetter -= 26
                 }
-                //if the letter is beyond Z, start from a
+                    //if the letter is beyond Z, start from a
                 else if(numberLetter < 65)
                 {
                     numberLetter += 26
@@ -108,20 +107,6 @@ class ViewControllerVigener: UIViewController {
         }
         textToEncrypt.text = encryptedText
     }
-
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension String{

@@ -20,25 +20,31 @@ class ViewControllerCaesar: UIViewController {
         //tap to dismiss keyboard
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
-
-        // Do any additional setup after loading the view.
     }
     
-    func dismissKeyboard() {
-        view.endEditing(true)
-    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
+    
+}
+
+extension UIViewController{
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
+
+extension ViewControllerCaesar{
+    
     //change text while typing, reset step counter
     @IBAction func textFieldChanged(sender: AnyObject) {
         TextToCipher.text = textField.text
         stepCounter = 0
         textStepCounter.text = String(stepCounter)
     }
-
+    
     @IBAction func ButtonTappedBack(sender: AnyObject) {
         let text : String = TextToCipher.text!
         var textChanged : String = ""
@@ -53,11 +59,11 @@ class ViewControllerCaesar: UIViewController {
                 if ((number >= 66 && number <= 90) || (number >= 98 && number <= 122)){
                     number -= 1
                 }
-                //if the letter is A, shift it to Z
+                    //if the letter is A, shift it to Z
                 else if(number == 65){
                     number = 90
                 }
-                //if the letter is a, shift it to z
+                    //if the letter is a, shift it to z
                 else if(number == 97){
                     number = 122
                 }
@@ -90,11 +96,11 @@ class ViewControllerCaesar: UIViewController {
                 if ((number >= 65 && number <= 89) || (number >= 97 && number <= 121)){
                     number += 1
                 }
-                //if the letter is Z, shift it to A
+                    //if the letter is Z, shift it to A
                 else if(number == 90){
                     number = 65
                 }
-                //if the letter is z, shift it to A
+                    //if the letter is z, shift it to A
                 else if(number == 122){
                     number = 97
                 }
@@ -113,6 +119,5 @@ class ViewControllerCaesar: UIViewController {
         TextToCipher.text = textChanged
         textStepCounter.text = String(stepCounter)
     }
-
 
 }

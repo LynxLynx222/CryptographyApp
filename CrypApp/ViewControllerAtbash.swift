@@ -19,18 +19,16 @@ class ViewControllerAtbash: UIViewController {
         //tap to dismiss keyboard
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    func dismissKeyboard() {
-        view.endEditing(true)
-    }
     
+}
+
+extension ViewControllerAtbash{
     @IBAction func ButtonTapped(sender: AnyObject) {
         let text = textFieldToChange.text
         var encryptedText : String = ""
@@ -40,7 +38,7 @@ class ViewControllerAtbash: UIViewController {
             //convert letter to ordinal value
             let ord = String(letter).unicodeScalars
             var number = ord[ord.startIndex].value
-    
+            
             //if the letter is between a and z, turn it into opposite letter, then append it
             if (number >= 97 && number <= 122){
                 number = 219 - number
@@ -58,15 +56,4 @@ class ViewControllerAtbash: UIViewController {
         }
         textToEncrypt.text = encryptedText
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
