@@ -103,10 +103,8 @@
 		0D8F97671DA66940002D4401 /* CrypApp */ = {
 			isa = PBXGroup;
 			children = (
-				0D8F979A1DA66A6B002D4401 /* CollectionViewController.swift */,
-				0D8F979C1DA66AE8002D4401 /* ViewControllerCaesar.swift */,
-				0DBA3BF51DA6BA3200E723E3 /* ViewControllerAtbash.swift */,
-				0D7904681DA7CB6800A00393 /* ViewControllerVigener.swift */,
+				0DC2DDD51DCBB2E60006952F /* CVC */,
+				0DC2DDD61DCBB2F70006952F /* VC */,
 				0D8F97681DA66940002D4401 /* AppDelegate.swift */,
 				0D8F976C1DA66941002D4401 /* Main.storyboard */,
 				0D8F976F1DA66941002D4401 /* Assets.xcassets */,
@@ -132,6 +130,24 @@
 				0D8F978A1DA66941002D4401 /* Info.plist */,
 			);
 			path = CrypAppUITests;
+			sourceTree = "<group>";
+		};
+		0DC2DDD51DCBB2E60006952F /* CVC */ = {
+			isa = PBXGroup;
+			children = (
+				0D8F979A1DA66A6B002D4401 /* CollectionViewController.swift */,
+			);
+			name = CVC;
+			sourceTree = "<group>";
+		};
+		0DC2DDD61DCBB2F70006952F /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				0D8F979C1DA66AE8002D4401 /* ViewControllerCaesar.swift */,
+				0DBA3BF51DA6BA3200E723E3 /* ViewControllerAtbash.swift */,
+				0D7904681DA7CB6800A00393 /* ViewControllerVigener.swift */,
+			);
+			name = VC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
